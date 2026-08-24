@@ -1,0 +1,43 @@
+{
+  "company": "Stripe",
+  "snapshot": "Stripe, Inc. (dual-headquartered in South San Francisco, California, United States, and Dublin, Ireland) is a privately owned financial technology company with a valuation of about $159 billion and over $1.9 trillion in payment volume processed in 2025, processing transactions for 5 million businesses in that year.",
+  "snapshot_source": "s1",
+  "signals": [
+    {
+      "text": "Stripe brings AI-enabled checkout experience to Facebook.",
+      "source_id": "s2",
+      "item": "recent news / announcements"
+    },
+    {
+      "text": "Stripe launches its own subscriptions app on the Shopify App Store, competing with Recharge, Loop, and Shopify\u2019s native tool.",
+      "source_id": "s3",
+      "item": "recent news / announcements"
+    }
+  ],
+  "stakeholders": [],
+  "hypotheses": [],
+  "suggested_opener": "Open with: \"Stripe brings AI-enabled checkout experience to Facebook.\" [s2] and ask what changed since.",
+  "sources": [
+    {
+      "source_id": "s1",
+      "url": "https://en.wikipedia.org/wiki/Stripe,_Inc.",
+      "retrieved_at": "2026-08-24T02:25:32.257798+00:00"
+    },
+    {
+      "source_id": "s2",
+      "url": "https://www.finextra.com/latest-announcements?company=stripe",
+      "retrieved_at": "2026-08-24T02:28:01.772351+00:00"
+    },
+    {
+      "source_id": "s3",
+      "url": "https://www.shopifreaks.com/company/stripe/",
+      "retrieved_at": "2026-08-24T02:29:31.159663+00:00"
+    }
+  ],
+  "unverified_items": [
+    "funding history / financials",
+    "headcount trend",
+    "tech stack signals",
+    "org changes (leadership moves, hiring surges)"
+  ]
+}
