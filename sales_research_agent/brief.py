@@ -1,26 +1,25 @@
-from config import CHECKLIST
 from evidence_store import EvidenceStore
 
 SNAPSHOT_ITEM = "company snapshot (size, industry, HQ)"
 
 
-def _sentences_for(store: EvidenceStore, item: str) -> list[dict]:
-    return [r for r in store.for_item(item) if r.get("fact")]
+def _sentences_for(store: EvidenceStore, item: str, company: str) -> list[dict]:
+    return [r for r in store.for_item(item) if r.get("fact") and r.get("company") == company]
 
 
-def compile_brief(company: str, store: EvidenceStore) -> dict:
+def compile_brief(company: str, store: EvidenceStore, checklist: list[str]) -> dict:
     unverified_items = []
 
-    snapshot_records = _sentences_for(store, SNAPSHOT_ITEM)
+    snapshot_records = _sentences_for(store, SNAPSHOT_ITEM, company)
     snapshot = snapshot_records[0]["fact"] if snapshot_records else None
     if not snapshot:
         unverified_items.append(SNAPSHOT_ITEM)
 
     signals = []
-    for item in CHECKLIST:
+    for item in checklist:
         if item == SNAPSHOT_ITEM:
             continue
-        records = _sentences_for(store, item)
+        records = _sentences_for(store, item, company)
         if not records:
             unverified_items.append(item)
             continue
@@ -35,9 +34,10 @@ def compile_brief(company: str, store: EvidenceStore) -> dict:
     hypotheses = _infer_pain_points(signals)
     opener = _infer_opener(company, signals, hypotheses)
 
+    company_records = [r for r in store.all() if r.get("company") == company]
     sources = [
         {"source_id": r["source_id"], "url": r["url"], "retrieved_at": r["retrieved_at"]}
-        for r in sorted(store.all(), key=lambda r: int(r["source_id"].lstrip("s")))
+        for r in sorted(company_records, key=lambda r: int(r["source_id"].lstrip("s")))
     ]
 
     return {

@@ -86,7 +86,7 @@ def extract_relevant_fact(page_text: str, checklist_item: str, company: str) -> 
     if SKIP_LLM:
         return _heuristic_extract(page_text, checklist_item)
 
-    truncated = page_text[:6000]
+    truncated = page_text[:1500]  # ~230 prompt tokens at observed page density -> ~20s at 12 tok/s on CPU, vs 75-90s at 6000 chars
     prompt = EXTRACT_PROMPT.format(
         checklist_item=checklist_item,
         company=company,

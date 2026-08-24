@@ -1,43 +1,86 @@
 {
-  "company": "Stripe",
-  "snapshot": "Stripe, Inc. (dual-headquartered in South San Francisco, California, United States, and Dublin, Ireland) is a privately owned financial technology company with a valuation of about $159 billion and over $1.9 trillion in payment volume processed in 2025, processing transactions for 5 million businesses in that year.",
+  "company": "Notion",
+  "snapshot": "is the company that owns notion.so.",
   "snapshot_source": "s1",
   "signals": [
     {
-      "text": "Stripe brings AI-enabled checkout experience to Facebook.",
-      "source_id": "s2",
-      "item": "recent news / announcements"
-    },
-    {
-      "text": "Stripe launches its own subscriptions app on the Shopify App Store, competing with Recharge, Loop, and Shopify\u2019s native tool.",
-      "source_id": "s3",
-      "item": "recent news / announcements"
+      "text": "Notion Agents can now read and write more filetypes like Excel and PowerPoint, and build interactive HTML blocks, like an ROI calculator.",
+      "source_id": "s12",
+      "item": "recent product updates"
     }
   ],
   "stakeholders": [],
   "hypotheses": [],
-  "suggested_opener": "Open with: \"Stripe brings AI-enabled checkout experience to Facebook.\" [s2] and ask what changed since.",
+  "suggested_opener": "Open with: \"Notion Agents can now read and write more filetypes like Excel and PowerPoint, and build interactive HTML blocks, like an ROI calculator.\" [s12] and ask what changed since.",
   "sources": [
     {
       "source_id": "s1",
-      "url": "https://en.wikipedia.org/wiki/Stripe,_Inc.",
-      "retrieved_at": "2026-08-24T02:25:32.257798+00:00"
+      "url": "https://getlatka.com/companies/notion",
+      "retrieved_at": "2026-08-24T13:24:23.427848+00:00"
     },
     {
       "source_id": "s2",
-      "url": "https://www.finextra.com/latest-announcements?company=stripe",
-      "retrieved_at": "2026-08-24T02:28:01.772351+00:00"
+      "url": "https://sqmagazine.co.uk/notion-statistics/",
+      "retrieved_at": "2026-08-24T13:24:23.620530+00:00"
     },
     {
       "source_id": "s3",
-      "url": "https://www.shopifreaks.com/company/stripe/",
-      "retrieved_at": "2026-08-24T02:29:31.159663+00:00"
+      "url": "https://www.notion.com/templates/notions-headcount-tracker",
+      "retrieved_at": "2026-08-24T13:24:30.931628+00:00"
+    },
+    {
+      "source_id": "s4",
+      "url": "https://jobsbyculture.com/blog/notion-employee-count-2026",
+      "retrieved_at": "2026-08-24T13:24:31.179109+00:00"
+    },
+    {
+      "source_id": "s5",
+      "url": "https://www.unifygtm.com/insights-headcount/notion",
+      "retrieved_at": "2026-08-24T13:24:31.499896+00:00"
+    },
+    {
+      "source_id": "s6",
+      "url": "https://theirstack.com/en",
+      "retrieved_at": "2026-08-24T13:24:36.091282+00:00"
+    },
+    {
+      "source_id": "s7",
+      "url": "https://releasebot.io/updates/notion",
+      "retrieved_at": "2026-08-24T13:24:37.824514+00:00"
+    },
+    {
+      "source_id": "s8",
+      "url": "https://www.notion.com/releases/2026-05-13",
+      "retrieved_at": "2026-08-24T13:24:37.948234+00:00"
+    },
+    {
+      "source_id": "s9",
+      "url": "https://theirstack.com/en/company/notion~DZdobkePaVcMnMMrQLDaYA==",
+      "retrieved_at": "2026-08-24T13:24:40.851197+00:00"
+    },
+    {
+      "source_id": "s10",
+      "url": "https://salestools.io/en/report/notion-275m-series-c",
+      "retrieved_at": "2026-08-24T13:37:48.208646+00:00"
+    },
+    {
+      "source_id": "s11",
+      "url": "https://www.commonroom.io/research/notion/investors-funding/",
+      "retrieved_at": "2026-08-24T13:38:57.226728+00:00"
+    },
+    {
+      "source_id": "s12",
+      "url": "https://www.notion.com/releases",
+      "retrieved_at": "2026-08-24T14:05:29.170995+00:00"
     }
   ],
   "unverified_items": [
-    "funding history / financials",
-    "headcount trend",
-    "tech stack signals",
-    "org changes (leadership moves, hiring surges)"
+    "product roadmap",
+    "market share",
+    "customer success stories",
+    "competitive landscape",
+    "industry trends",
+    "customer acquisition cost (CAC)",
+    "customer retention rate"
   ]
 }

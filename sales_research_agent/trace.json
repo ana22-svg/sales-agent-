@@ -1,0 +1,263 @@
+{
+  "meta": {
+    "company": "Notion",
+    "started_at": "2026-08-24T14:02:14.003685+00:00",
+    "ended_at": "2026-08-24T14:05:53.806462+00:00",
+    "elapsed_s": 219.8,
+    "summary": "satisfied=1/8 elapsed=220s budget=steps=25/40  time=220s/180s  tokens=0  cost=$0.0000/1.0"
+  },
+  "events": [
+    {
+      "t": 0.0,
+      "timestamp": "2026-08-24T14:02:14.004347+00:00",
+      "item": "product roadmap",
+      "event": "start",
+      "detail": "product roadmap Notion"
+    },
+    {
+      "t": 0.0,
+      "timestamp": "2026-08-24T14:02:14.004616+00:00",
+      "item": "market share",
+      "event": "start",
+      "detail": "market share Notion"
+    },
+    {
+      "t": 4.11,
+      "timestamp": "2026-08-24T14:02:18.112659+00:00",
+      "item": "market share",
+      "event": "search",
+      "detail": "5 results"
+    },
+    {
+      "t": 6.85,
+      "timestamp": "2026-08-24T14:02:20.857901+00:00",
+      "item": "product roadmap",
+      "event": "search",
+      "detail": "5 results"
+    },
+    {
+      "t": 7.49,
+      "timestamp": "2026-08-24T14:02:21.492175+00:00",
+      "item": "market share",
+      "event": "fetch",
+      "detail": "https://www.wmtips.com/technologies/online-collaboration/notion/ success=False"
+    },
+    {
+      "t": 8.38,
+      "timestamp": "2026-08-24T14:02:22.381450+00:00",
+      "item": "product roadmap",
+      "event": "fetch",
+      "detail": "https://www.notion.com/templates/category/product-roadmap success=True"
+    },
+    {
+      "t": 10.9,
+      "timestamp": "2026-08-24T14:02:24.899208+00:00",
+      "item": "market share",
+      "event": "fetch",
+      "detail": "https://6sense.com/tech/collaborative-workspaces/notion-market-share success=False"
+    },
+    {
+      "t": 14.16,
+      "timestamp": "2026-08-24T14:02:28.164277+00:00",
+      "item": "market share",
+      "event": "fetch",
+      "detail": "https://6sense.com/tech/reporting/notion-market-share success=False"
+    },
+    {
+      "t": 14.16,
+      "timestamp": "2026-08-24T14:02:28.166403+00:00",
+      "item": "customer success stories",
+      "event": "start",
+      "detail": "customer success stories Notion"
+    },
+    {
+      "t": 27.81,
+      "timestamp": "2026-08-24T14:02:41.811162+00:00",
+      "item": "customer success stories",
+      "event": "search",
+      "detail": "5 results"
+    },
+    {
+      "t": 28.71,
+      "timestamp": "2026-08-24T14:02:42.718202+00:00",
+      "item": "customer success stories",
+      "event": "fetch",
+      "detail": "https://www.notion.com/customers success=True"
+    },
+    {
+      "t": 60.31,
+      "timestamp": "2026-08-24T14:03:14.310788+00:00",
+      "item": "product roadmap",
+      "event": "extract",
+      "detail": "https://www.notion.com/templates/category/product-roadmap -> NONE"
+    },
+    {
+      "t": 60.59,
+      "timestamp": "2026-08-24T14:03:14.593048+00:00",
+      "item": "product roadmap",
+      "event": "fetch",
+      "detail": "https://www.notion.com/help/guides/using-notion-for-product-roadmaps success=True"
+    },
+    {
+      "t": 81.77,
+      "timestamp": "2026-08-24T14:03:35.769994+00:00",
+      "item": "customer success stories",
+      "event": "extract",
+      "detail": "https://www.notion.com/customers -> NONE"
+    },
+    {
+      "t": 82.01,
+      "timestamp": "2026-08-24T14:03:36.015643+00:00",
+      "item": "customer success stories",
+      "event": "fetch",
+      "detail": "https://decagon.ai/case-studies/notion success=True"
+    },
+    {
+      "t": 103.11,
+      "timestamp": "2026-08-24T14:03:57.113036+00:00",
+      "item": "product roadmap",
+      "event": "extract",
+      "detail": "https://www.notion.com/help/guides/using-notion-for-product-roadmaps -> NONE"
+    },
+    {
+      "t": 103.6,
+      "timestamp": "2026-08-24T14:03:57.600084+00:00",
+      "item": "product roadmap",
+      "event": "fetch",
+      "detail": "https://thomascerulis.notion.site/Product-Roadmap-1797fd5b41bc80518fc6df0669d0f761 success=True"
+    },
+    {
+      "t": 131.95,
+      "timestamp": "2026-08-24T14:04:25.953727+00:00",
+      "item": "customer success stories",
+      "event": "extract",
+      "detail": "https://decagon.ai/case-studies/notion -> NONE"
+    },
+    {
+      "t": 133.49,
+      "timestamp": "2026-08-24T14:04:27.489391+00:00",
+      "item": "customer success stories",
+      "event": "fetch",
+      "detail": "https://www.featuredcustomers.com/vendor/notion/case-studies success=True"
+    },
+    {
+      "t": 141.47,
+      "timestamp": "2026-08-24T14:04:35.475457+00:00",
+      "item": "product roadmap",
+      "event": "extract",
+      "detail": "https://thomascerulis.notion.site/Product-Roadmap-1797fd5b41bc80518fc6df0669d0f761 -> NONE"
+    },
+    {
+      "t": 141.48,
+      "timestamp": "2026-08-24T14:04:35.478793+00:00",
+      "item": "recent product updates",
+      "event": "start",
+      "detail": "recent product updates Notion"
+    },
+    {
+      "t": 144.99,
+      "timestamp": "2026-08-24T14:04:38.991005+00:00",
+      "item": "recent product updates",
+      "event": "search",
+      "detail": "5 results"
+    },
+    {
+      "t": 145.19,
+      "timestamp": "2026-08-24T14:04:39.191356+00:00",
+      "item": "recent product updates",
+      "event": "fetch",
+      "detail": "https://www.notion.com/releases success=True"
+    },
+    {
+      "t": 150.81,
+      "timestamp": "2026-08-24T14:04:44.810484+00:00",
+      "item": "customer success stories",
+      "event": "extract",
+      "detail": "https://www.featuredcustomers.com/vendor/notion/case-studies -> NONE"
+    },
+    {
+      "t": 150.81,
+      "timestamp": "2026-08-24T14:04:44.812126+00:00",
+      "item": "competitive landscape",
+      "event": "start",
+      "detail": "competitive landscape Notion"
+    },
+    {
+      "t": 155.04,
+      "timestamp": "2026-08-24T14:04:49.045875+00:00",
+      "item": "competitive landscape",
+      "event": "search",
+      "detail": "5 results"
+    },
+    {
+      "t": 155.68,
+      "timestamp": "2026-08-24T14:04:49.680592+00:00",
+      "item": "competitive landscape",
+      "event": "fetch",
+      "detail": "https://www.notion.so/0d326afb79e84d7d80fb5eeeeb3ff084 success=False"
+    },
+    {
+      "t": 157.82,
+      "timestamp": "2026-08-24T14:04:51.824400+00:00",
+      "item": "competitive landscape",
+      "event": "fetch",
+      "detail": "https://www.notion.com/templates/competitive-analysis success=True"
+    },
+    {
+      "t": 195.17,
+      "timestamp": "2026-08-24T14:05:29.169121+00:00",
+      "item": "recent product updates",
+      "event": "extract",
+      "detail": "https://www.notion.com/releases -> fact"
+    },
+    {
+      "t": 195.17,
+      "timestamp": "2026-08-24T14:05:29.171368+00:00",
+      "item": "recent product updates",
+      "event": "saved",
+      "detail": "s12: Notion Agents can now read and write more filetypes like Excel and PowerPoint, and build i"
+    },
+    {
+      "t": 195.17,
+      "timestamp": "2026-08-24T14:05:29.171957+00:00",
+      "item": "recent product updates",
+      "event": "stopped_early",
+      "detail": "wall-clock limit hit (195s > 180.0s)"
+    },
+    {
+      "t": 195.17,
+      "timestamp": "2026-08-24T14:05:29.174155+00:00",
+      "item": "industry trends",
+      "event": "skipped",
+      "detail": "wall-clock limit hit (195s > 180.0s)"
+    },
+    {
+      "t": 195.17,
+      "timestamp": "2026-08-24T14:05:29.176707+00:00",
+      "item": "customer acquisition cost (CAC)",
+      "event": "skipped",
+      "detail": "wall-clock limit hit (195s > 180.0s)"
+    },
+    {
+      "t": 195.17,
+      "timestamp": "2026-08-24T14:05:29.177316+00:00",
+      "item": "customer retention rate",
+      "event": "skipped",
+      "detail": "wall-clock limit hit (195s > 180.0s)"
+    },
+    {
+      "t": 219.8,
+      "timestamp": "2026-08-24T14:05:53.804476+00:00",
+      "item": "competitive landscape",
+      "event": "extract",
+      "detail": "https://www.notion.com/templates/competitive-analysis -> NONE"
+    },
+    {
+      "t": 219.8,
+      "timestamp": "2026-08-24T14:05:53.805307+00:00",
+      "item": "competitive landscape",
+      "event": "stopped_early",
+      "detail": "wall-clock limit hit (220s > 180.0s)"
+    }
+  ]
+}

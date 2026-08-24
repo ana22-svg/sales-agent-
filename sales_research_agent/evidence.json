@@ -3,27 +3,111 @@
     {
       "source_id": "s1",
       "checklist_item": "company snapshot (size, industry, HQ)",
-      "url": "https://en.wikipedia.org/wiki/Stripe,_Inc.",
-      "retrieved_at": "2026-08-24T02:25:32.257798+00:00",
-      "fact": "Stripe, Inc. (dual-headquartered in South San Francisco, California, United States, and Dublin, Ireland) is a privately owned financial technology company with a valuation of about $159 billion and over $1.9 trillion in payment volume processed in 2025, processing transactions for 5 million businesses in that year.",
+      "company": "Notion",
+      "url": "https://getlatka.com/companies/notion",
+      "retrieved_at": "2026-08-24T13:24:23.427848+00:00",
+      "fact": "is the company that owns notion.so.",
       "confidence": "medium"
     },
     {
       "source_id": "s2",
-      "checklist_item": "recent news / announcements",
-      "url": "https://www.finextra.com/latest-announcements?company=stripe",
-      "retrieved_at": "2026-08-24T02:28:01.772351+00:00",
-      "fact": "Stripe brings AI-enabled checkout experience to Facebook.",
+      "checklist_item": "company snapshot (size, industry, HQ)",
+      "company": "Notion",
+      "url": "https://sqmagazine.co.uk/notion-statistics/",
+      "retrieved_at": "2026-08-24T13:24:23.620530+00:00",
+      "fact": "The estimated company valuation stands at $10 billion .",
       "confidence": "medium"
     },
     {
       "source_id": "s3",
+      "checklist_item": "headcount trend",
+      "company": "Notion",
+      "url": "https://www.notion.com/templates/notions-headcount-tracker",
+      "retrieved_at": "2026-08-24T13:24:30.931628+00:00",
+      "fact": "Notion\u2019s headcount tracker 2026 Template | Notion Marketplace About this creator Email the creator notion.so Twitter TikTok LinkedIn More by Notion Browse 571 templates Free Free Free More like this Ready Templates Free People Ops in a Box Free Nagaraj Free Related content Visit Help Center Build a ",
+      "confidence": "medium"
+    },
+    {
+      "source_id": "s4",
+      "checklist_item": "headcount trend",
+      "company": "Notion",
+      "url": "https://jobsbyculture.com/blog/notion-employee-count-2026",
+      "retrieved_at": "2026-08-24T13:24:31.179109+00:00",
+      "fact": "Notion Has ~4,800 Employees in 2026 \u2014 Full Headcount Breakdown TL;DR &mdash; Key Takeaways Notion has approximately 4,800 employees as of 2026, based on our research (estimates range from 4,700&ndash;6,000).",
+      "confidence": "medium"
+    },
+    {
+      "source_id": "s5",
+      "checklist_item": "headcount trend",
+      "company": "Notion",
+      "url": "https://www.unifygtm.com/insights-headcount/notion",
+      "retrieved_at": "2026-08-24T13:24:31.499896+00:00",
+      "fact": "Employee Data and Trends for Notion | Unify Solutions Customers Resources Pricing Sign in Book a Demo Book a Demo Try for free Try for free Sign in Book a Demo Book a Demo Try for free Try for free Company Insights How Many People Work at Notion?",
+      "confidence": "medium"
+    },
+    {
+      "source_id": "s6",
+      "checklist_item": "tech stack signals",
+      "company": "Notion",
+      "url": "https://theirstack.com/en",
+      "retrieved_at": "2026-08-24T13:24:36.091282+00:00",
+      "fact": "TheirStack | Technology Lookup Hiring Signals Skip to main content Technology Usage Hiring Signals Find your next customer Trusted by industry leaders Trusted by the world&#x27;s most innovative sales and marketing teams Signals Find customers ready to buy your product Use job postings to uncover re",
+      "confidence": "medium"
+    },
+    {
+      "source_id": "s7",
       "checklist_item": "recent news / announcements",
-      "url": "https://www.shopifreaks.com/company/stripe/",
-      "retrieved_at": "2026-08-24T02:29:31.159663+00:00",
-      "fact": "Stripe launches its own subscriptions app on the Shopify App Store, competing with Recharge, Loop, and Shopify\u2019s native tool.",
+      "company": "Notion",
+      "url": "https://releasebot.io/updates/notion",
+      "retrieved_at": "2026-08-24T13:24:37.824514+00:00",
+      "fact": "Original source Show more Similar to Notion with recent updates: Perplexity release notes 29 release notes \u00c2\u00b7 Latest Jul 27, 2026 Anthropic release notes 774 release notes \u00c2\u00b7 Latest Aug 22, 2026 OpenAI release notes 946 release notes \u00c2\u00b7 Latest Aug 21, 2026 Cursor release notes 127 release notes \u00c2\u00b7 L",
+      "confidence": "medium"
+    },
+    {
+      "source_id": "s8",
+      "checklist_item": "recent news / announcements",
+      "company": "Notion",
+      "url": "https://www.notion.com/releases/2026-05-13",
+      "retrieved_at": "2026-08-24T13:24:37.948234+00:00",
+      "fact": "Recent releases All releases \u2192 August 19, 2026 Your Developer Portal, now in the sidebar August 14, 2026 Model selection, simplified August 7, 2026 Share context with Custom Agents from the Share menu",
+      "confidence": "medium"
+    },
+    {
+      "source_id": "s9",
+      "checklist_item": "tech stack signals",
+      "company": "Notion",
+      "url": "https://theirstack.com/en/company/notion~DZdobkePaVcMnMMrQLDaYA==",
+      "retrieved_at": "2026-08-24T13:24:40.851197+00:00",
+      "fact": "Notion Tech Stack Job Postings | TheirStack Skip to main content Notion Tech Stack Job Postings Notion technologies, open positions and hiring signals notion.com LinkedIn 344 technologies See all Get alerted 2,873 job postings See all Get alerted Tech Stack at Notion Discover the 344 technologies th",
+      "confidence": "medium"
+    },
+    {
+      "source_id": "s10",
+      "checklist_item": "recent funding round",
+      "company": "Notion",
+      "url": "https://salestools.io/en/report/notion-275m-series-c",
+      "retrieved_at": "2026-08-24T13:37:48.208646+00:00",
+      "fact": "Notion raised a $275M Series C funding round in 2023.",
+      "confidence": "medium"
+    },
+    {
+      "source_id": "s11",
+      "checklist_item": "recent funding round",
+      "company": "Notion",
+      "url": "https://www.commonroom.io/research/notion/investors-funding/",
+      "retrieved_at": "2026-08-24T13:38:57.226728+00:00",
+      "fact": "Notion's recent Series D round raised $275 million at a valuation of $10.39 billion.",
+      "confidence": "medium"
+    },
+    {
+      "source_id": "s12",
+      "checklist_item": "recent product updates",
+      "company": "Notion",
+      "url": "https://www.notion.com/releases",
+      "retrieved_at": "2026-08-24T14:05:29.170995+00:00",
+      "fact": "Notion Agents can now read and write more filetypes like Excel and PowerPoint, and build interactive HTML blocks, like an ROI calculator.",
       "confidence": "medium"
     }
   ],
-  "next_id": 4
+  "next_id": 13
 }

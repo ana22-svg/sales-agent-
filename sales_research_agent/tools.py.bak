@@ -14,6 +14,9 @@ import requests
 
 from config import FETCH_TIMEOUT
 
+BLOCKED_DOMAINS = {"tracxn.com", "zoominfo.com", "pitchbook.com", "exa.ai", "websets.exa.ai"}
+
+
 try:
     from ddgs import DDGS
 except ImportError:  # pragma: no cover

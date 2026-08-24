@@ -14,6 +14,31 @@ import requests
 
 from config import FETCH_TIMEOUT
 
+import time
+import functools
+
+def with_retry(max_attempts=3, base_delay=2, exceptions=(Exception,)):
+    """Retry a call with exponential backoff. Re-raises the last exception
+    if all attempts fail, so the caller's existing fail-soft handling
+    (try/except around search()/fetch()) still catches it."""
+    def decorator(fn):
+        @functools.wraps(fn)
+        def wrapper(*args, **kwargs):
+            last_exc = None
+            for attempt in range(1, max_attempts + 1):
+                try:
+                    return fn(*args, **kwargs)
+                except exceptions as e:
+                    last_exc = e
+                    if attempt < max_attempts:
+                        delay = base_delay * (2 ** (attempt - 1))
+                        print(f"  [retry] {fn.__name__} attempt {attempt} failed ({e}); retrying in {delay}s")
+                        time.sleep(delay)
+            raise last_exc
+        return wrapper
+    return decorator
+
+
 BLOCKED_DOMAINS = {"tracxn.com", "zoominfo.com", "pitchbook.com", "exa.ai", "websets.exa.ai"}
 
 
@@ -37,6 +62,17 @@ class SearchResult:
         return f"SearchResult({self.url!r})"
 
 
+class FetchResult:
+    def __init__(self, url: str, text: str | None, success: bool, error: str | None = None):
+        self.url = url
+        self.text = text
+        self.success = success
+        self.error = error
+
+    def __repr__(self):
+        return f"FetchResult({self.url!r}, success={self.success})"
+
+
 def search(query: str, max_results: int = 5) -> list[SearchResult]:
     """
     Run a DuckDuckGo search. Returns [] on any failure — network, rate
@@ -57,12 +93,19 @@ def search(query: str, max_results: int = 5) -> list[SearchResult]:
         print("  [search] ddgs not installed — skipping search")
         return []
 
-    try:
-        with DDGS() as ddgs:
-            raw = list(ddgs.text(query, max_results=max_results))
-    except Exception as e:
-        print(f"  [search] failed for query={query!r}: {e}")
-        return []
+    raw = None
+    for attempt in range(1, 4):
+        try:
+            with DDGS() as ddgs:
+                raw = list(ddgs.text(query, max_results=max_results))
+            break
+        except Exception as e:
+            if attempt == 3:
+                print(f"  [search] failed for query={query!r} after 3 attempts: {e}")
+                return []
+            delay = 2 ** (attempt - 1)
+            print(f"  [search] attempt {attempt} failed ({e}); retrying in {delay}s")
+            time.sleep(delay)
 
     results = []
     for r in raw:
@@ -77,33 +120,40 @@ def search(query: str, max_results: int = 5) -> list[SearchResult]:
     return results
 
 
-def fetch(url: str) -> str | None:
-    """Fetch a URL and return cleaned page text, or None on failure."""
+def fetch(url: str) -> FetchResult:
+    """Fetch a URL and return a FetchResult (text populated on success)."""
     headers = {
         "User-Agent": (
             "Mozilla/5.0 (compatible; SalesResearchAgent/0.3; "
             "+https://example.com/bot)"
         )
     }
-    try:
-        resp = requests.get(url, headers=headers, timeout=FETCH_TIMEOUT)
-        resp.raise_for_status()
-    except Exception as e:
-        print(f"  [fetch] failed for {url}: {e}")
-        return None
+    resp = None
+    for attempt in range(1, 4):
+        try:
+            resp = requests.get(url, headers=headers, timeout=FETCH_TIMEOUT)
+            resp.raise_for_status()
+            break
+        except Exception as e:
+            if attempt == 3:
+                print(f"  [fetch] failed for {url} after 3 attempts: {e}")
+                return FetchResult(url=url, text=None, success=False, error=str(e))
+            delay = 2 ** (attempt - 1)
+            print(f"  [fetch] attempt {attempt} failed ({e}); retrying in {delay}s")
+            time.sleep(delay)
 
     content_type = resp.headers.get("content-type", "")
     if "text/html" not in content_type and "text/plain" not in content_type:
         print(f"  [fetch] skipping non-text content ({content_type}): {url}")
-        return None
+        return FetchResult(url=url, text=None, success=False, error=f"non-text content-type: {content_type}")
 
     text = _extract_text(resp.text)
 
     if len(text) < 200:
         print(f"  [fetch] extracted text too short (JS-heavy page?): {url}")
-        return None
+        return FetchResult(url=url, text=None, success=False, error="extracted text too short")
 
-    return text
+    return FetchResult(url=url, text=text, success=True)
 
 
 def _extract_text(html: str) -> str:

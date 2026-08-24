@@ -30,12 +30,13 @@ class EvidenceStore:
                 indent=2,
             )
 
-    def add(self, checklist_item: str, url: str, fact: str, confidence: str = "medium") -> str:
+    def add(self, checklist_item: str, url: str, fact: str, company: str, confidence: str = "medium") -> str:
         source_id = f"s{self._next_id}"
         self._next_id += 1
         record = {
             "source_id": source_id,
             "checklist_item": checklist_item,
+            "company": company,
             "url": url,
             "retrieved_at": datetime.now(timezone.utc).isoformat(),
             "fact": fact,
